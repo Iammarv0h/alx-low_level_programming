@@ -12,10 +12,10 @@ int main(void)
 	float f;
 
 
-printf("Size of char: %lu byte(s)\n", (unsigned int)sizeof(a));
-printf("Size of int: %lu byte(s)\n", (unsigned int)sizeof(b));
-printf("size of long int: %lu byte(s)\n", (unsigned int)sizeof(c));
-printf("size of long long int: %lu byte(s)\n", (unsigned int)sizeof(d));
-printf("size of float: %lu byte(s)\n", (unsigned int)sizeof(f));
+printf("Size of a char: %lu byte(s)\n", (unsigned int)sizeof(a));
+printf("Size of an int: %lu byte(s)\n", (unsigned int)sizeof(b));
+printf("size of a long int: %lu byte(s)\n", (unsigned int)sizeof(c));
+printf("size of a long long int: %lu byte(s)\n", (unsigned int)sizeof(d));
+printf("size of a float: %lu byte(s)\n", (unsigned int)sizeof(f));
 return (0);
 }
