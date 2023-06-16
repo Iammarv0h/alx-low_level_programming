@@ -1,28 +1,29 @@
 #include <stdio.h>
 #include <time.h>
+#include <stdlib.h>
+
 /**
- * main function- a program that assigns a random number to the variable n each time it is executed and then prints to stdout
- * time.h used in conjuction with the srand function
- * return: 0(success0
+ * main - prints if a number is positive, negative or zero
+ * Return: 0(success)
  */
-int main(void){
+int main(void)
+{
 	int n;
-	srand(time(NULL));  // Seed the random number generator
-        	n = rand();  // Generate a random number
 
-		/*code goes here*/
-
-		printf("The number is %d\n", n);
-
-    		if (n > 0) {
-        		printf("n is positive\n");
-   	        } else if (n == 0) {
-        		printf("n is zero\n");
-   	        } else {
-        		printf("n is negative\n");
-    		}
-
-    		printf("\n");
-
-    		return 0;
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	/* your code goes there */
+	if (n > 0)
+	{
+		printf("%d is positive\n", n;
+	}
+	else if (n == 0)
+	{
+		printf("%d is zero\n", n);
+	}
+	else
+	{
+		printf("%d  is negative\n", n);
+	}
+	return (0);
 }
