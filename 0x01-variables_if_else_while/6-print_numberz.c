@@ -1,13 +1,16 @@
 #include <stdio.h>
+
 /**
- * main- This is the starting point
- * Return: 0(compiled successful)
+ * main - entry point
+ * Return: 0 (success)
  */
 int main(void)
 {
-	for (int i = 0; i <= 9; i++)
+	int number;
+
+	for (number = 0; number <= 9; number++)
 	{
-		putchar(i + '0');
+		putchar(number + '0');
 	}
 	putchar('\n');
 	return (0);
