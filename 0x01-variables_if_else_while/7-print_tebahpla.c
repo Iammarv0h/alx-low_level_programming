@@ -1,14 +1,16 @@
 #include <stdio.h>
-/**
- * main - the program starts here
- * Return: 0(compiled successfully)
- */
 
+/**
+ * main - entry point
+ * Return: 0 (success)
+ */
 int main(void)
 {
-	for (char c = 'z'; c >= 'a'; c--)
+	char letter;
+
+	for (letter = 'z'; letter >= 'a'; letter--)
 	{
-		putchar(c);
+		putchar(letter);
 	}
 	putchar('\n');
 	return (0);
