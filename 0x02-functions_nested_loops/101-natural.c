@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main - natural numbers below 10
- * Return: 0(cmpiled successfully 
+ * Return: 0(cmpiled successfully
  */
 
 int main(void)
