@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  * print_alphabet - mke the alphabet letters
@@ -11,13 +11,7 @@ void print_alphabet(void)
 
 	for (letter = 'a'; letter <= 'z'; letter++)
 	{
-		putchar(letter);
+		_putchar(letter);
 	}
-	putchar('\n');
-}
-
-int main(void)
-{
-	print_alphabet();
-	return (0);
+	_putchar('\n');
 }
