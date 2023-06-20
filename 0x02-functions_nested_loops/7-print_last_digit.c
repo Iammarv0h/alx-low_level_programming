@@ -2,7 +2,7 @@
 #include <stdlib.h>
 /**
  * print_last_digit - prints the last digit of a number
- * @number: the number that will be printed or sth
+ * @n: the number that will be printed or sth
  * Return: the value of the last digit
  */
 int print_last_digit(int n)
