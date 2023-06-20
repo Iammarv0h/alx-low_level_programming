@@ -1,26 +1,22 @@
 #include <stdio.h>
-
 /**
- * main - Computes and prints the sum of multiples of 3 or 5 below 1024
- *
- * Return: Always 0
+ * main - natural numbers below 10
+ * Return: 0(cmpiled successfully)
  */
+
 int main(void)
 {
-    int limit = 1024;
-    int sum = 0;
-    int i;
+	int limit = 1024;
 
-    for (i = 0; i < limit; i++)
-    {
-        if (i % 3 == 0 || i % 5 == 0)
-            sum += i;
-    }
+	int sum = 0;
 
-    char buffer[20];
-    sprintf(buffer, "%d\n", sum);
-    write(1, buffer, strlen(buffer));
-
-    return 0;
+	for (int i = 3; i < limit; i++)
+	{
+		if (i % 3 == 0 || i % 5 == 0)
+		{
+			sum += i;
+		}
+	}
+	printf("%d\n", sum);
+	return (0);
 }
-
