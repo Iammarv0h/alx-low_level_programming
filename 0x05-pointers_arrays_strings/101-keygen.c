@@ -1,24 +1,37 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
 
 /**
- * main - Generates random valid passwords for 101-crackme
- * Return: 0
+ * generate_keygen - Generates a keygen.
+ *
+ * Return: The generated keygen string.
+ */
+char *generate_keygen(void)
+{
+	int total = 2772;
+	char *keygen = malloc(total + 1); /* Allocate memory for the keygen string*/
+	int i;
+
+	srand(time(NULL));
+	for (i = 0; i < total; i++)
+	{
+		keygen[i] = rand() % 128; /* Generate random ASCII characters*/
+	}
+	keygen[total] = '\0'; /* Add null terminator at the end of the string*/
+	return (keygen);
+}
+
+/**
+ * main - Entry point. Generates and prints a keygen.
+ *
+ * Return: Always 0.
  */
 int main(void)
 {
-	int password_length = 10;
-	char password[11]; /* One extra space for the null terminator*/
-	int i;
+	char *keygen = generate_keygen();
 
-	srand(time(0)); /*Seed the random number generator with the current time*/
-	for (i = 0; i < password_length; i++)
-	{
-		/*Generate a random ASCII character between 'A' and 'z'*/
-		password[i] = (rand() % ('z' - 'A')) + 'A';
-	}
-	password[password_length] = '\0'; /* Add null terminator at the end*/
-	printf("Generated Password: %s\n", password);
+	printf("%s\n", keygen);
+	free(keygen); /*Free the allocated memory*/
 	return (0);
 }
