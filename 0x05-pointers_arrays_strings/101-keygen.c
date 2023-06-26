@@ -3,35 +3,27 @@
 #include <time.h>
 
 /**
- * generate_keygen - Generates a keygen.
+ * main - generates random passwords
  *
- * Return: The generated keygen string.
- */
-char *generate_keygen(void)
-{
-	int total = 2772;
-	char *keygen = malloc(total + 1); /* Allocate memory for the keygen string*/
-	int i;
-
-	srand(time(NULL));
-	for (i = 0; i < total; i++)
-	{
-		keygen[i] = rand() % 128; /* Generate random ASCII characters*/
-	}
-	keygen[total] = '\0'; /* Add null terminator at the end of the string*/
-	return (keygen);
-}
-
-/**
- * main - Entry point. Generates and prints a keygen.
- *
- * Return: Always 0.
+ * Return: 0(compiled succesfully)
  */
 int main(void)
 {
-	char *keygen = generate_keygen();
+	int m = 0, i = 0;
+	time_t t;
 
-	printf("%s\n", keygen);
-	free(keygen); /*Free the allocated memory*/
+	srand((unsigned int)time(&t));
+
+	while (i < 2772)
+	{
+		m = rand() % 128;
+		if ((i + m) > 2772)
+			break;
+		i = i + m;
+		printf("%c", m);
+	}
+
+	printf("%c\n", (2772 - i));
+
 	return (0);
 }
