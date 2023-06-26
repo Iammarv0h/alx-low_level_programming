@@ -8,9 +8,11 @@
 void print_array(int *a, int n)
 {
 	int i;
+
 	for (i = 0; i < n; i++)
 	{
 		int num = a[i];
+
 		if (num < 0)
 		{
 			_putchar('-');
@@ -23,6 +25,7 @@ void print_array(int *a, int n)
 		else
 		{
 			int divisor = 1;
+
 			while (divisor <= num)
 				divisor *= 10;
 			divisor /= 10;
