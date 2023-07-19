@@ -28,27 +28,25 @@ void print_opcodes(char *main_addr, int bytes)
  */
 int main(int argc, char **argv)
 {
-    char *main_addr;
-    int bytes;
+	char *main_addr;
+	int bytes;
 
-    if (argc != 2)
-    {
-        printf("Error\n");
-        return 1;
-    }
+	if (argc != 2)
+	{
+		printf("Error\n");
+		return (1);
+	}
 
-    bytes = atoi(argv[1]);
-    if (bytes < 0)
-    {
-        printf("Error\n");
-        return 2;
-    }
+	bytes = atoi(argv[1]);
+	if (bytes < 0)
+	{
+		printf("Error\n");
+		return (2);
+	}
 
-    /* Get the address of the main function */
-    main_addr = (char *)main;
-
-    /* Print the opcodes of the main function */
-    print_opcodes(main_addr, bytes);
-
-    return (0);
+	/* Get the address of the main function */
+	main_addr = (char *)main;
+	/* Print the opcodes of the main function */
+	print_opcodes(main_addr, bytes);
+	return (0);
 }
