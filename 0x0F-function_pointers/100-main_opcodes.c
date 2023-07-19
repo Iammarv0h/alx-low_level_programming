@@ -10,6 +10,7 @@
 void print_opcodes(char *main_addr, int bytes)
 {
 	int i;
+
 	for (i = 0; i < bytes; i++)
 	{
 		printf("%.2hhx", main_addr[i]);
